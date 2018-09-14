@@ -1,0 +1,356 @@
+
+<script language="javascript">
+// Follow function is check IE4.0 or NS 4.0 Up version.
+ var bV=parseInt(navigator.appVersion);
+ var NS4=(document.layers) ? true : false;
+ var IE4=((document.all)&&(bV>=4)) ? true : false;
+ //if((!NS4)&&(!(IE4)))
+ //   window.open("NoDisp.htm","_top") 
+if((navigator.appName.indexOf("Microsoft")>=0) || (navigator.appName.indexOf("Netscape")>=0)){
+   if(parseInt(navigator.appVersion.charAt(0))<4){
+      //alert("請使用IE4.0或Netscape4.0以上版本!");
+      //alert(window.top);    
+      window.open("https://net.fubonbank.com.tw/ebank/NoDisp.htm","_top");       
+   }
+}
+else {
+    //alert("請使用IE4.0或Netscape4.0以上版本!");
+    window.open("https://net.fubonbank.com.tw/ebank/NoDisp.htm","_top"); 
+}
+window.focus();
+</script>   
+
+<script language="javascript"> 
+function checknumber(n){
+    for(i = 0 ;i<n.value.length;i++) { 
+        if( (n.value.charCodeAt(i) <= 47 ) || (n.value.charCodeAt(i) >= 58) ){
+            alert("注意: 輸入欄位必須是數字！");
+            n.value=''
+            return false;	
+        }
+    }   
+    return true;   //Added for older Netscape Browser
+}
+
+//check Account size.
+function checkAccSize(Account,Size) {
+
+    if (Account.value.length == Size){
+        return true;
+    }
+    else {
+        alert("注意!帳號必須是" + Size + "位數.");
+        return false;
+    }
+}
+
+//prevent from duplicate fund-transfer
+function disVisibility(){
+    if(document.all){
+        document.all["btnSubmit"].style.visibility="hidden";
+    }    
+    else if(document.layers){ 
+        
+    }    
+}
+
+
+//function NoRightClick(evnt) {
+//if (navigator.appName.toUpperCase().match(/NETSCAPE/) != null) {
+//if (evnt.which == 3){alert("富邦銀行版權所有，請尊重智慧財產權!");return false;}}else
+//if (event.button==2)alert("富邦銀行版權所有，請尊重智慧財產權!");}
+//document.onmousedown = NoRightClick;
+//</Script>
+<html>
+<head>
+<title>定期定額基金投資明細查詢</title>
+</head>
+
+<body text="#0031A5" background="../images/t_ebank.gif">
+
+      
+      <div align="center">
+  <table border="0" cellspacing="0" cellpadding="0">
+    <tr> 
+      <td nowrap><img src="../images/i_table_funds.gif" width="118" height="72" align="top"><img src="../images/h_table_funds01.gif" width="470" height="71" align="top"></td>
+    </tr>
+  </table>
+  <table border="8" cellpadding="8" cellspacing="2" width="700" bordercolorlight="#6666FF" bordercolordark="#0000CC" vspace="0" hspace="0" bgcolor="#0035A4">
+    <tr align="center"> 
+      <td bgcolor="#0035A4" colspan="2"> 
+        <table border="0" cellspacing="0" cellpadding="2">
+          <tr valign="top"> 
+            <td nowrap width="441"><strong><b><font color="#FFFF66">戶名 : </font></b></strong><font color="#FFFF63"> 黃信華                                    先生
+              <b><br>
+              <strong>信託帳號 : </strong></b>040-25-006336-0</font><b><font color="#FFFF66"> 
+              <br>
+              </font></b></td>
+            <td nowrap width="190"> 
+              <div align="left"><font color="#9FFFCF"><font size="2">日期 :</font><font color="#9FFFCF"><font size="2">92/6/11</font></font><font size="2"><br>
+                時間 :</font><font size="2" color="#9FFFCF">AM 09:22<br>
+                </font><font color="#9CFFCE" size="2">信託憑證號碼 : 0390001433</font></font></div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  </div>    
+      
+<table border="0" cellpadding="0" cellspacing="0" width="715" height="1">
+  <tr>
+    <td width="715" height="20" colspan="2"><strong>(一)受益權單位申購計算欄</strong></td>
+  </tr>
+</table>      
+
+</center></div>
+<div align="center"><center>
+
+
+      
+             <p>                                
+             <table border="1" cellpadding="4" cellspacing="0" width="93%" height="23">
+             <tr bordercolor="#9FFFCF" bgcolor="#E9E9E9">
+             <td width="15%" height="1" align="center"><small>扣帳日期</small></td>
+             <td width="20%" height="1" align="center"><small>指定投資標的</small></td>
+             <!--
+             <td width="20%" height="1" align="center"><small>扣款帳號</small></td>
+             -->
+             <td width="25%" height="1" align="center"><small>本次信託金額</small></td>
+             <td width="18%"  height="1" align="center"><small>手續費</small></td>
+             <td width="30%" height="1" align="center"><small>本次扣帳金額</small></td>
+             </tr>
+                
+          
+  <tr bordercolor="#9FFFCF">
+    <td width="15%" height="15" align="center"><p align="center"><small><font face="細明體">092/03/17</font></small></td>
+    <td width="20%" height="15" align="left"><p align="left"><small><font face="細明體"> 怡富國際債     </font></small></td>
+    <!--<td width="20%" height="15" align="center"><small><font face="細明體"></font></small></td>-->
+    <td width="25%" height="15" align="right"><small><font face="細明體">TWD　5,000.00</font></small></td>
+    <td width="18%"  height="15" align="right"><small><font face="細明體">TWD　53.00</font></small></td>
+    <td width="30%" height="15" align="right"><small><font face="細明體">TWD　5,053.00</font></small></td>
+  </tr>          
+         
+             
+          
+  <tr bordercolor="#9FFFCF">
+    <td width="15%" height="15" align="center"><p align="center"><small><font face="細明體">092/04/16</font></small></td>
+    <td width="20%" height="15" align="left"><p align="left"><small><font face="細明體"> 怡富國際債     </font></small></td>
+    <!--<td width="20%" height="15" align="center"><small><font face="細明體"></font></small></td>-->
+    <td width="25%" height="15" align="right"><small><font face="細明體">TWD　5,000.00</font></small></td>
+    <td width="18%"  height="15" align="right"><small><font face="細明體">TWD　53.00</font></small></td>
+    <td width="30%" height="15" align="right"><small><font face="細明體">TWD　5,053.00</font></small></td>
+  </tr>          
+         
+             
+          
+  <tr bordercolor="#9FFFCF">
+    <td width="15%" height="15" align="center"><p align="center"><small><font face="細明體">092/05/16</font></small></td>
+    <td width="20%" height="15" align="left"><p align="left"><small><font face="細明體"> 怡富國際債     </font></small></td>
+    <!--<td width="20%" height="15" align="center"><small><font face="細明體"></font></small></td>-->
+    <td width="25%" height="15" align="right"><small><font face="細明體">TWD　5,000.00</font></small></td>
+    <td width="18%"  height="15" align="right"><small><font face="細明體">TWD　53.00</font></small></td>
+    <td width="30%" height="15" align="right"><small><font face="細明體">TWD　5,053.00</font></small></td>
+  </tr>          
+         
+                           
+          
+</table>
+</center></div>
+
+<p>　</p>
+<div align="center"><center>
+
+<table border="1" cellpadding="4" cellspacing="0" width="93%" height="39">
+  <tr bordercolor="#9FFFCF" bgcolor="#E9E9E9">
+    <td width="15%"  height="1" align="center"><small>基金交易日</small></td>
+    <!--
+    <td width="12%"  height="1" align="center"><small>本次扣款</small><br>
+    <small>次別</small></td>
+    -->
+    <td width="15%"  height="1" align="center"><small>匯率</small></td>
+    <td width="15%"  height="1" align="center"><small>幣別</small></td>
+    <td width="20%"  height="1" align="center"><small>本次信託金額</small><br>
+    <small>(原幣)</small></td>
+    <td width="15%"  height="1" align="center"><small>基金單位淨值或</small><br>
+    <small>交易價格</small></td>
+    <td width="20%"  height="1" align="center"><small>本次受益權</small><br><small>單位數</small></td>
+  </tr>
+            
+       
+ <tr bordercolor="#9FFFCF">
+    <td width="15%" height="1" align="center"><small><font face="細明體">092/03/17</font></small></td>
+    <!--<td width="12%" height="1" align="center"><small><font face="細明體"></font></small></td>-->
+    <td width="15%" height="1" align="center"><small><font face="細明體">34.7150</font></small></td>
+    <td width="15%" height="1" align="left"><small><font face="細明體">美金</font></small></td>
+    <td width="20%" height="1" align="right"><small><font face="細明體">144.03</font></small></td>
+    <td width="15%" height="1" align="right"><small><font face="細明體">19.0300</font></small></td>
+    <td width="20%" height="1" align="right"><small><font face="細明體">7.5690</font></small></td>
+ </tr>
+  
+                     
+       
+ <tr bordercolor="#9FFFCF">
+    <td width="15%" height="1" align="center"><small><font face="細明體">092/04/16</font></small></td>
+    <!--<td width="12%" height="1" align="center"><small><font face="細明體"></font></small></td>-->
+    <td width="15%" height="1" align="center"><small><font face="細明體">34.8150</font></small></td>
+    <td width="15%" height="1" align="left"><small><font face="細明體">美金</font></small></td>
+    <td width="20%" height="1" align="right"><small><font face="細明體">143.62</font></small></td>
+    <td width="15%" height="1" align="right"><small><font face="細明體">18.7600</font></small></td>
+    <td width="20%" height="1" align="right"><small><font face="細明體">7.6560</font></small></td>
+ </tr>
+  
+                     
+       
+ <tr bordercolor="#9FFFCF">
+    <td width="15%" height="1" align="center"><small><font face="細明體">092/05/16</font></small></td>
+    <!--<td width="12%" height="1" align="center"><small><font face="細明體"></font></small></td>-->
+    <td width="15%" height="1" align="center"><small><font face="細明體">34.7270</font></small></td>
+    <td width="15%" height="1" align="left"><small><font face="細明體">美金</font></small></td>
+    <td width="20%" height="1" align="right"><small><font face="細明體">143.98</font></small></td>
+    <td width="15%" height="1" align="right"><small><font face="細明體">19.9400</font></small></td>
+    <td width="20%" height="1" align="right"><small><font face="細明體">7.2210</font></small></td>
+ </tr>
+  
+               
+</table>
+</center></div>          
+          <p>　</p>
+<div align="center"><center>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"></td>
+  </tr>
+  <tr>
+    <td width="715" height="20"><strong>(二)信託財產交易明細欄</strong></td>
+  </tr>
+</table>
+<div align="center"><center>
+
+<table border="1" cellpadding="4" cellspacing="0" width="93%" height="37">
+  <tr bordercolor="#9FFFCF" bgcolor="#E9E9E9">
+    <td width="15%" height="1" align="center" valign="middle"><small>交易別</small></td>
+    <td width="25%" height="1" align="center"><small>基金名稱</small></td>
+    <td width="15%" height="1" align="center"><small>交易日/結算日</small></td>
+    <td width="15%" height="1" align="center"><small>本次信託金額</small></td>
+    <!--
+    <td width="15%" height="1" align="center"><small>累計信託金額</small><br>
+    <small>(原幣)</small></td>
+    -->
+    <td width="30%" height="1" align="center"><small>本次受益單位數</small></td>
+    <!--
+    <td width="20%" height="1" align="center"><small>累計受益</small><br>
+    <small>單位數</small></td>
+    -->
+  </tr>
+          
+
+  <tr bordercolor="#9FFFCF">
+    <td width="15%" height="1" align="center"><small><font face="細明體"> 申購 </font></small></td>
+    <td width="25%" height="1" align="left">  <small><font face="細明體"> 怡富國際債     </font></small></td>
+    <td width="15%" height="1" align="center"><small><font face="細明體">092/03/17</font></small></td>
+    <td width="15%" height="1" align="right"> <small><font face="細明體">TWD　5,000.00</font></small></td>
+    <!--<td width="15%" height="1" align="right"><small><font face="細明體"></font></small></td>-->
+    <td width="30%" height="1" align="right"> <small><font face="細明體">7.5690 </font></small></td>
+    <!--<td width="20%" height="1" align="right"><small><font face="細明體"></font></small></td>-->
+  </tr>
+             
+
+  <tr bordercolor="#9FFFCF">
+    <td width="15%" height="1" align="center"><small><font face="細明體"> 申購 </font></small></td>
+    <td width="25%" height="1" align="left">  <small><font face="細明體"> 怡富國際債     </font></small></td>
+    <td width="15%" height="1" align="center"><small><font face="細明體">092/04/16</font></small></td>
+    <td width="15%" height="1" align="right"> <small><font face="細明體">TWD　5,000.00</font></small></td>
+    <!--<td width="15%" height="1" align="right"><small><font face="細明體"></font></small></td>-->
+    <td width="30%" height="1" align="right"> <small><font face="細明體">7.6560 </font></small></td>
+    <!--<td width="20%" height="1" align="right"><small><font face="細明體"></font></small></td>-->
+  </tr>
+             
+
+  <tr bordercolor="#9FFFCF">
+    <td width="15%" height="1" align="center"><small><font face="細明體"> 配息 </font></small></td>
+    <td width="25%" height="1" align="left">  <small><font face="細明體"> 怡富國際債     </font></small></td>
+    <td width="15%" height="1" align="center"><small><font face="細明體">092/04/17</font></small></td>
+    <td width="15%" height="1" align="right"> <small><font face="細明體">TWD　66.00</font></small></td>
+    <!--<td width="15%" height="1" align="right"><small><font face="細明體"></font></small></td>-->
+    <td width="30%" height="1" align="right"> <small><font face="細明體">0.0000 </font></small></td>
+    <!--<td width="20%" height="1" align="right"><small><font face="細明體"></font></small></td>-->
+  </tr>
+             
+
+  <tr bordercolor="#9FFFCF">
+    <td width="15%" height="1" align="center"><small><font face="細明體"> 申購 </font></small></td>
+    <td width="25%" height="1" align="left">  <small><font face="細明體"> 怡富國際債     </font></small></td>
+    <td width="15%" height="1" align="center"><small><font face="細明體">092/05/16</font></small></td>
+    <td width="15%" height="1" align="right"> <small><font face="細明體">TWD　5,000.00</font></small></td>
+    <!--<td width="15%" height="1" align="right"><small><font face="細明體"></font></small></td>-->
+    <td width="30%" height="1" align="right"> <small><font face="細明體">7.2210 </font></small></td>
+    <!--<td width="20%" height="1" align="right"><small><font face="細明體"></font></small></td>-->
+  </tr>
+             
+</table>
+</center></div>                            
+<p>　</p>
+
+<table border="0" width="100%">
+  <tr>
+    <td width="100%"><strong>(三) 損益估算欄</strong></td>
+  </tr>
+</table>
+<div align="center"><center>
+
+<table border="1" cellpadding="4" cellspacing="0" width="93%" height="34">
+  <tr bordercolor="#9FFFCF" bgcolor="#E9E9E9">
+    <td width="12%" height="1" align="center" valign="middle"><small>結算日</small></td>
+    <td width="12%" height="1" align="center"><small>累計信託</small><br><small>金額</small></td>
+    <td width="14%" height="1" align="center"><small>累計受益</small><br>
+    <small>單位數</small></td>
+    <td width="12%" height="1" align="center" valign="middle">
+    <p align="center"><small>信託餘額</small></td>
+    <td width="18%" height="1" align="center"><small>基金名稱</small></td>
+    <td width="12%" height="1" align="center"><small>單位淨值</small></td>
+    <td width="9%" height="1" align="center"><p align="center"><small>匯率</small></td>
+    <td width="8%" height="1" align="center"><small><p align="center">幣別</small></td>
+    <td width="18%" height="1" align="center"><small><p align="center">損益</small><br><small>計算</small></td>
+  </tr>
+
+           
+
+
+  <tr bordercolor="#9FFFCF">
+    <td width="12%" bgcolor="#FFFFFF" height="1" align="center"><small><font face="細明體">092/06/11</font></small></td>
+    <td width="12%" bgcolor="#FFFFFF" height="1" align="right"> <small><font face="細明體">TWD　15,000.00</font></small></td>
+    <td width="14%" bgcolor="#FFFFFF" height="1" align="right"> <small><font face="細明體">22.4460</font></small></td>
+    <td width="12%" bgcolor="#FFFFFF" height="1" align="right"> <small><font face="細明體">TWD　15,711.00</font></small></td>
+    <td width="18%" bgcolor="#FFFFFF" height="1" align="left">  <small><font face="細明體"> 怡富國際債     </font></small></td>
+    <td width="12%" bgcolor="#FFFFFF" height="1" align="right"> <small><font face="細明體">20.2000</font></small></td>
+    <td width="9%"  bgcolor="#FFFFFF" height="1" align="right"> <small><font face="細明體">34.6500</font></small></td>
+    <td width="8%"  bgcolor="#FFFFFF" height="1" align="center"><small><font face="細明體">USD</font></small></td>
+    <td width="18%" bgcolor="#FFFFFF" height="1" align="center"><small><font face="細明體">711.00 </font></small></td>
+  </tr>
+                               
+ 
+</table>
+</center></div>
+<p>
+   
+<center>
+<p> 
+&nbsp;&nbsp; ==================================================================================
+<center>謝謝您對本行的支持與愛護，並請繼續惠顧 ！ </center>
+&nbsp;&nbsp; ==================================================================================</p>         
+<p>     
+</center>  
+</body> 
+     
+</html> 
+ 
+ 
+
+<script language=JavaScript src=http://tw.yimg.com/a/tw/js/adhtml3.js></script>
+<script language=JavaScript>
+var yviContents='http://tw.adserver.yahoo.com/a?f=152955059&p=tw_kfreeho&l=NE&c=sr';
+yviR='tw';
+yfiEA(0);
+</script>
